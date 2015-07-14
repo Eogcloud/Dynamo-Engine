@@ -1,6 +1,6 @@
-#include <GLFW\glfw3.h>
-#include <iostream>
 #include "src/graphics/window.h"
+#include <iostream>
+#include <GLFW\glfw3.h>
 
 int main()
 {
@@ -10,16 +10,20 @@ int main()
 	Window window("Dynamo", 1024, 768);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
-	while (!window.Closed()){
-		
-		std::cout << window.getWidth() << "x" << window.getHeight() << std::endl;
+	GLuint vao;
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
+
+	while (!window.Closed())
+	{
 		
 		window.Clear();
-		glBegin(GL_TRIANGLES);
+		glBegin(GL_POLYGON);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(0.0f, 0.5f);
 		glVertex2f(0.5f, -0.5f);
 		glEnd();
+		glDrawArrays(GL_ARRAY_BUFFER, 0, 0);
 		window.Update();
 	}
 
