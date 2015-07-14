@@ -1,4 +1,4 @@
-#include "src/graphics/window.h"
+#include "graphics/window.h"
 #include <iostream>
 #include <GLFW\glfw3.h>
 
@@ -18,6 +18,7 @@ int main()
 	{
 		
 		window.Clear();
+		std::cout << window.IsKeyPressed(GLFW_KEY_A) << std::endl;
 		glBegin(GL_POLYGON);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(0.0f, 0.5f);
