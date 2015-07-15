@@ -97,26 +97,26 @@ namespace dynamo{
 			return notEqual(other);
 		}
 
-		vec2& operator+(vec2& vecOne, const vec2& vecTwo)
+		vec2& operator+(vec2 vecOne, const vec2& vecTwo)
 		{
 			return vecOne.add(vecTwo);
 		}
-		vec2& operator-(vec2& vecOne, const vec2& vecTwo)
+		vec2& operator-(vec2 vecOne, const vec2& vecTwo)
 		{
 			return vecOne.subtract(vecTwo);
 		}
-		vec2& operator*(vec2& vecOne, const vec2& vecTwo)
+		vec2& operator*(vec2 vecOne, const vec2& vecTwo)
 		{
 			return vecOne.multiply(vecTwo);
 		}
-		vec2& operator/(vec2& vecOne, const vec2& vecTwo)
+		vec2& operator/(vec2 vecOne, const vec2& vecTwo)
 		{
 			return vecOne.divide(vecTwo);
 		}
 
 		std::ostream& operator<<(std::ostream& stream, const vec2& vector)
 		{
-			stream << "vec2: (" << vector.x << ", " << vector.y << ")" << std::endl;
+			return stream << "vec2: (" << vector.x << ", " << vector.y << ")" << std::endl;
 		}
 	}
 }

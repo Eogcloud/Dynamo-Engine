@@ -26,10 +26,10 @@ namespace dynamo{
 			bool operator==(const vec2& other);
 			bool operator!=(const vec2& other);
 
-			friend vec2& operator+(vec2& vecOne, const vec2& vecTwo);
-			friend vec2& operator-(vec2& vecOne, const vec2& vecTwo);
-			friend vec2& operator*(vec2& vecOne, const vec2& vecTwo);
-			friend vec2& operator/(vec2& vecOne, const vec2& vecTwo);
+			friend vec2& operator+(vec2 vecOne, const vec2& vecTwo);
+			friend vec2& operator-(vec2 vecOne, const vec2& vecTwo);
+			friend vec2& operator*(vec2 vecOne, const vec2& vecTwo);
+			friend vec2& operator/(vec2 vecOne, const vec2& vecTwo);
 
 			friend std::ostream& operator<<(std::ostream& stream, const vec2& vector);
 		};
