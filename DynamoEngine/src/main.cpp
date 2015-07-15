@@ -1,11 +1,14 @@
 #include "graphics/window.h"
+#include "math/vec2.h"
 #include <iostream>
 #include <GLFW\glfw3.h>
+
 
 int main()
 {
 	using namespace dynamo;
 	using namespace graphics;
+	using namespace math;
 
 	Window window("Dynamo", 1024, 768);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
@@ -13,6 +16,8 @@ int main()
 	GLuint vao;
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
+
+	vec2 vector(1.0f, 2.0f);
 
 	while (!window.Closed())
 	{
